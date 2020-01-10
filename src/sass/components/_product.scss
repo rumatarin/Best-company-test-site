@@ -1,0 +1,77 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    max-width: 25rem;
+    padding: 2rem 2rem 1.2rem 2rem;
+    background-color: $prim-col;
+    margin: 0 1.5rem 2rem 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__pic {
+    max-width: 21rem;
+    max-height: 21rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: $prim-font-col;
+
+    margin: 2.2rem 0 4.8rem 0;
+  }
+
+  &__price-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: $price-font-col;
+  }
+
+  &__addbasket {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__pagination {
+    align-self: center;
+    margin: 2.7rem 0 6.7rem 0;
+  }
+
+  &__pagination-link {
+    text-decoration: none;
+    color: $price-font-col;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__pagination-active {
+    font-size: 1.8rem;
+    color: $price-font-col;
+  }
+}

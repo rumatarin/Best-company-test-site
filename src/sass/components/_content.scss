@@ -1,0 +1,148 @@
+.content {
+  flex: 1 0 auto;
+  padding: 1rem 0;
+  min-height: 138.5rem;
+
+  &__breadcrumbs {
+    margin-bottom: 2rem;
+    display: flex;
+  }
+
+  &__breadcrumbs-link {
+    line-height: 1.8rem;
+    color: $prim-font-col;
+    text-decoration: none;
+
+    position: relative;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: .1rem;
+        width: 100%;
+        background-color: $prim-font-col;
+      }
+
+      &::after {
+        content: '/';
+        position: absolute;
+        right: -1rem;
+        display: block;
+        // width: 1rem;
+        margin-left: .6rem;
+      }
+    }
+
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+  }
+
+  &__leftblock {
+    min-height: 100%;
+    flex-basis: 20rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menu {
+    list-style: none;
+    margin-bottom: 11.2rem;
+  }
+
+  &__menu-active {
+    a {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: .1rem;
+        width: 100%;
+        background-color: $prim-font-col;
+      }
+    }
+  }
+
+  &__menu-link {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: $prim-font-col;
+    text-decoration: none;
+  }
+
+  &__submenu {
+    list-style: disc;
+    margin: .5rem 0 .5rem 2rem;
+
+  }
+
+  &__submenu-active {
+    a {
+      position: relative;
+      color: #000 !important;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: .1rem;
+        width: 100%;
+        background-color: $prim-font-col;
+      }
+    }
+  }
+
+  &__submenu-link {
+    color: $prim-font-col;
+    text-decoration: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__pricelist {
+    align-self: center;
+  }
+
+  &__pricelist-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color: $price-font-col;
+    text-decoration: none;
+  }
+
+  &__centerblock {
+    min-height: 100%;
+    flex-basis: 78rem;
+    margin-left: auto;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3rem;
+    border-top: .1rem solid $sec-col;
+  }
+
+  &__text-col {
+    max-width: 37rem;
+  }
+}

@@ -1,0 +1,40 @@
+.header {
+  padding: 4rem 0 6.5rem 0;
+  background-color: $prim-col;
+  flex: 0 0 auto;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+
+  &__contacts-tel {
+    font-family: 'OpenSansCondensed', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4.6rem;
+    color: $prim-font-col;
+    text-decoration: none;
+
+    &:not(:first-child) {
+      margin: .5rem 0;
+    }
+  }
+
+  &__feedback-link {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color: $prim-font-col;
+    text-decoration: none;
+
+    align-self: flex-end;
+    border-bottom: 2px dashed $prim-font-col;
+  }
+}

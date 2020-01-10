@@ -1,0 +1,29 @@
+// Media query manger
+//0 - 600px:    Phone
+//600 - 900px:   Tablet portrait mode
+//900 - 1200px:   Tablet landscape
+//1200 - 1800 is where our normal styles apply
+//1800px+: big desktop
+//Order: base + typography > general layout + grid > page layout > components
+//$breakpoints arguments choices
+//- phone-min
+//- phone
+//- tab-port
+//- tab-land
+//- big-desktop
+
+//1em = 16px
+
+@mixin for-size($size) {
+  @if $size == phone-portrait {
+    @media (max-width: 29.999em) { @content; }
+  } @else if $size == phone-landscape {
+    @media (min-width: 30em) { @content; }
+  } @else if $size == tablets {
+    @media (min-width: 48em) { @content; }
+  } @else if $size == desktops {
+    @media (min-width: 62em) { @content; }
+  } @else if $size == desktop-large {
+    @media (min-width: 75em) { @content; }
+  }
+}
