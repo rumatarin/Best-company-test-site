@@ -12,7 +12,7 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "js": "^0.1.0",
     "slider": "^1.0.4",
     "svgxuse": "^1.2.6"
